@@ -1,12 +1,30 @@
 //
-//  main.cpp
+//  main.c
 //  Vigenere Cipher
 //
 //  Created by william on 2019/9/24.
 //  Copyright © 2019 William. All rights reserved.
 //
 
-#include <cstdio>
+#include <stdio.h>
+
+int stringInput(char in[100]) {
+    int Length = 0;
+    for (Length=0 ; ; Length++) {
+        scanf("%c", &in[Length]);
+        
+        if (!(in[Length]>=0&&in[Length]<=126))
+            Length--;
+        
+        if (in[Length]=='\n' || in[Length]==' ' || in[Length]=='\t') {
+            in[Length] = '\0';
+            break;
+        }
+        if (Length>98) break;
+    }
+    fflush(stdin);
+    return Length;
+}
 
 int main(void) {
     char PlainText[100];
@@ -14,9 +32,9 @@ int main(void) {
     char Keyword[20];
     int PlainTextSize=0, KeywordSize=0;
     printf("Input Plain Text > \n");
-    gets(PlainText);
+    stringInput(PlainText);
     printf("Input Keyword > \n");
-    gets(Keyword);
+    stringInput(Keyword);
     
     for (int i=0 ; PlainText[i]!='\0' ; i++)
         PlainTextSize++;
