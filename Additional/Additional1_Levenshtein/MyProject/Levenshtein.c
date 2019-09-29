@@ -1,5 +1,7 @@
 #include "Levenshtein.h"
+#include <stdio.h>
 
+const int WORDS_LEN_L = 20;
 /*
  returns the smallest in the three
  */
@@ -47,7 +49,7 @@ int stringInput(char in[50]) {
 int Levenshtein(char* A, int Alength, char* B, int Blength) {
 	int i=0, j=0;
 	
-	int Levenshtein[WORDS_LEN+1][WORDS_LEN+1];
+	int Levenshtein[WORDS_LEN_L+1][WORDS_LEN_L+1];
     
     for (i=0 ; i<=Alength ; i++) Levenshtein[i][0] = i;
     for (j=0 ; j<=Blength ; j++) Levenshtein[0][j] = j;
@@ -67,16 +69,16 @@ int Levenshtein(char* A, int Alength, char* B, int Blength) {
     return Levenshtein[Alength][Blength];
 }
 
-int main() {
-    char S[50], T[50];
-    int Slen = stringInput(S);
-    int Tlen = stringInput(T);
-    
-    int k=0, l=0;
-//    for (k=0 ; putchar(S[k])!='\0' ; k++);
-//    for (k=0 ; putchar(T[k])!='\0' ; k++);
-    
-    printf("%d", Levenshtein(S, Slen, T, Tlen));
-    
-    return 0;
-}
+//int main() {
+//    char S[50], T[50];
+//    int Slen = stringInput(S);
+//    int Tlen = stringInput(T);
+//    
+//    int k=0, l=0;
+////    for (k=0 ; putchar(S[k])!='\0' ; k++);
+////    for (k=0 ; putchar(T[k])!='\0' ; k++);
+//    
+//    printf("%d", Levenshtein(S, Slen, T, Tlen));
+//    
+//    return 0;
+//}

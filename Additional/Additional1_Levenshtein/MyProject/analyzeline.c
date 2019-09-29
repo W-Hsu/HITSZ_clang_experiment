@@ -1,5 +1,5 @@
 #include "analyzeline.h"
-
+#include "GlobalVariables.h"
 /*
  Global Variables WORDS_PER_LINE and WORDS_LEN are defined in "GlobalVariables.h"
  */

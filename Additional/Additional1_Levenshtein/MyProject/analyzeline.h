@@ -1,4 +1,6 @@
-#include "GlobalVariables.h"
+#ifndef analyzeline_h
+#define analyzeline_h
+//#include "GlobalVariables.h"
 
 /*
 Analyze a string patterned "XXXX YYYY/ZZZZ/AAAA/BBBB"
@@ -10,3 +12,4 @@ Returns the pointer -> first element of an char[WORDS_PER_LINE+1][WORDS_LEN] arr
 */
 
 char* analyzeLine(char inputLineString[100]);
+#endif

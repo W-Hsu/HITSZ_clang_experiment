@@ -1,9 +1,6 @@
 #ifndef Levenshtein_h
 #define Levenshtein_h
 
-#include <stdio.h>
-#include "GlobalVariables.h"
-
 /*
  returns the smallest in the three
  */
