@@ -4,6 +4,11 @@ const int LINENUM_LEN = 6;
 const int WORDS_PER_LINE = 5;
 const int WORDS_LEN = 15;
 
+/*
+ Analyze a string patterned "XXXX YYYY/ZZZZ/AAAA/BBBB"
+ XXXX will be considered as line number, 5 characters at most
+ YYYY, ZZZZ, AAAA, BBBB will be considered as words, 5 words at most and 14 characters per word at most
+ */
 int main() {
 	int i=0, j=0;
 	char lineNumber[LINENUM_LEN];

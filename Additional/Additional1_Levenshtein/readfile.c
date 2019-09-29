@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+ Read a text file line per line
+ Each line will be read in a 100(99)-character array
+ */
 int main() {
     FILE* vocabulary = fopen("./words.txt", "r");
     while (!feof(vocabulary)) {
@@ -12,4 +16,3 @@ int main() {
     }
     return 0;
 }
-
