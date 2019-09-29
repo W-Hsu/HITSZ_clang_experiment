@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "Levenshtein.h"
 
 /*
  returns the smallest in the three

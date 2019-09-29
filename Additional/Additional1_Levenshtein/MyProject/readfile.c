@@ -5,7 +5,7 @@
  Each line will be read in a 100(99)-character array
  */
 int main() {
-    FILE* vocabulary = fopen("./words.txt", "r");
+    FILE* vocabulary = fopen("../words.txt", "r");
     while (!feof(vocabulary)) {
         char c[100];
         int i=0;
@@ -16,3 +16,5 @@ int main() {
     }
     return 0;
 }
+
+//int readVocabulary
