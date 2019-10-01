@@ -11,5 +11,5 @@ Returns the pointer -> first element of an char[WORDS_PER_LINE+1][WORDS_LEN] arr
    array[1][*] ~ array[WORDS_LEN-1][*] contains words, if (No Words) the first element will be set to '\0'
 */
 
-char* analyzeLine(char inputLineString[100]);
+char** analyzeLine(char* inputLineString);
 #endif

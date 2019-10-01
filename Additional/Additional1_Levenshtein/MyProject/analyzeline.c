@@ -11,10 +11,11 @@
     array[0][*] stores Line Number
     array[1][*] ~ array[WORDS_LEN-1][*] contains words, if (No Words) the first element will be set to '\0'
  */
-char* analyzeLine(char inputLineString[100]) {
+char** analyzeLine(char* inputLineString) {
 	int i=0, j=0; /* declare loop controls */
     int inputLocation = 0; /* "location pointer" of inputLineString */
 	char words[WORDS_PER_LINE+1][WORDS_LEN];
+    char** ptr = words;
     
     for (i=0 ; i<WORDS_PER_LINE ; i++) words[i][0]='\0'; /* initialize the array with '\0' */
     
@@ -44,5 +45,5 @@ char* analyzeLine(char inputLineString[100]) {
 			}
 		}
 READ_LOOP_END:
-    return words;
-};
+    return ptr;
+}

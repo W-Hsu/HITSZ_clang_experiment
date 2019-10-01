@@ -73,12 +73,12 @@ int Levenshtein(char* A, int Alength, char* B, int Blength) {
 //    char S[50], T[50];
 //    int Slen = stringInput(S);
 //    int Tlen = stringInput(T);
-//    
+//
 //    int k=0, l=0;
 ////    for (k=0 ; putchar(S[k])!='\0' ; k++);
 ////    for (k=0 ; putchar(T[k])!='\0' ; k++);
-//    
+//
 //    printf("%d", Levenshtein(S, Slen, T, Tlen));
-//    
+//
 //    return 0;
 //}

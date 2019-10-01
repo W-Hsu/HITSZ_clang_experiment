@@ -1,4 +1,3 @@
-#pragma once
 #include <stdio.h>
 #include <string.h>
 #include "Levenshtein.h"
@@ -7,7 +6,7 @@
 const int WORDS_PER_LINE_M = 5;
 const int WORDS_LEN_M = 20;
 
-void putLine(char words[WORDS_PER_LINE_M+1][WORDS_LEN_M]) {
+void putLine(char** words) {
     int i=0, j=0;
     for (i=0 ; i<WORDS_PER_LINE_M+1 && words[i][0]!='\0' ; i++) {
         if (i=0) {
@@ -33,7 +32,7 @@ int main() {
          Each line will be read in a 100(99)-character array
          */
         char rawString[100]; /* Stores the raw string */
-        char (*words)[WORDS_LEN_M]; /* Stores the words analyzed */
+        char** words; /* Stores the words analyzed */
         int i=0; /* define loop controls */
         
         fgets(rawString, 100, wordsFile);
@@ -58,8 +57,8 @@ int main() {
                 
                 for (Blen=0 ; wordInVocabulary[Blen]!='\0' ; Blen++);
                 
-                EditDist = Levenshtein(words, Alen, wordInVocabulary, Blen);
-                if (EditDist>=min) continue;
+                EditDist = Levenshtein(words[i], Alen, wordInVocabulary, Blen);
+                if (EditDist>=minimumEditDistance) continue;
                 else if (EditDist=0) minimumEditDistance=0;
                 else {
                     minimumEditDistance = EditDist;
