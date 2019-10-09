@@ -4,7 +4,7 @@
 
 int main() {
     printf("Number:190110728\n");
-	printf("Subject No.3 - Program No.3\n\n");
+	printf("Subject No.3 - Program No.2\n\n");
 
 	int judge = 0, i = 0, sum = 1;
 
