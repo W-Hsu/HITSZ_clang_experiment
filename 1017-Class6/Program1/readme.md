@@ -1,0 +1,1 @@
+# From this Class on, I will not put the original file of screenshots in Program directory.
