@@ -22,7 +22,6 @@ int stringInput(char in[100]) {
         }
         if (Length>98) break;
     }
-    fflush(stdin);
     return Length;
 }
 
